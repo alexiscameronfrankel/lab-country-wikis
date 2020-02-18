@@ -15,7 +15,7 @@ class App extends Component {
   showCountryLinks = () => {
     let countryList = [...this.state.countries]
     return countryList.map(eachCountry => {
-      return <Link key={eachCountry.cca3} to={`/country-detail/${eachCountry.cca3}`}>{eachCountry.name.common}</Link>
+      return <Link key={eachCountry.cca3} to={`/countries-details/${eachCountry.cca3}`}>{eachCountry.name.common}</Link>
     })
   }
 
@@ -40,8 +40,8 @@ class App extends Component {
         </div>
         {/**Invisible */}
         <Switch>
-          <Route exact path="/country-detail/:hippopotamus" render={(props) => <CountryDetails {...props} cool="super fantastically amaxzing" countries={this.state.countries} />} />
-
+          <Route exact path="/countries-details/:cca3" render={(props) => <CountryDetails {...props} cool="super fantastically amaxzing" countries={this.state.countries} />} />
+          
         </Switch>
       </div>
     );
