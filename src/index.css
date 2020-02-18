@@ -1,0 +1,13 @@
+.col-5{
+  max-height: 90vh; overflow: scroll;
+}
+
+tr td {
+  width: 30%
+}
+
+.col-7{
+  position: absolute;
+  top: 100px;
+  right: 0;
+}
